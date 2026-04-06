@@ -9,6 +9,7 @@ services:
       - ./data/prometheus:/prometheus
     command:
       - '--config.file=/etc/prometheus/prometheus.yml'
+      - '--storage.tsdb.retention.time=7d'
     extra_hosts:
       - "host.docker.internal:host-gateway"
     restart: unless-stopped
