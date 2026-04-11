@@ -3311,8 +3311,8 @@
   },
   "timepicker": {},
   "timezone": "browser",
-  "title": "Go Metrics",
-  "uid": "go-metrics",
+  "title": "Go Throttle Metrics",
+  "uid": "go-throttle-metrics",
   "version": 45,
   "weekStart": ""
 }
