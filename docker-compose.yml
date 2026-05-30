@@ -12,7 +12,6 @@ services:
       - '--storage.tsdb.retention.time=7d'
     extra_hosts:
       - "host.docker.internal:host-gateway"
-    restart: unless-stopped
 
   grafana:
     image: grafana/grafana:latest
@@ -28,7 +27,6 @@ services:
       - GF_SECURITY_ADMIN_PASSWORD=admin
       - GF_AUTH_ANONYMOUS_ENABLED=false
       - GF_DASHBOARDS_DEFAULT_HOME_DASHBOARD_PATH=/var/lib/grafana/dashboards/container-monitoring-linux.json
-    restart: unless-stopped
 
   cadvisor:
     image: gcr.io/cadvisor/cadvisor:latest
@@ -44,4 +42,3 @@ services:
     privileged: true
     devices:
       - /dev/kmsg
-    restart: unless-stopped

@@ -18,3 +18,13 @@ scrape_configs:
     static_configs:
       - targets: ["host.docker.internal:8000"]
     metrics_path: "/metrics"
+
+  - job_name: "green-tea-gc"
+    static_configs:
+      - targets: ["host.docker.internal:8090"]
+    metrics_path: "/metrics"
+
+  - job_name: "default-gc"
+    static_configs:
+      - targets: ["host.docker.internal:8081"]
+    metrics_path: "/metrics"
